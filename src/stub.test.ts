@@ -9,7 +9,7 @@ beforeEach(async () => {
   const pactFiles = readdirSync(pactsDirectory).map((pactFile) =>
     join(pactsDirectory, pactFile)
   );
-  pactStub = new Stub({ pactUrls: pactFiles, port: 4000 });
+  pactStub = new Stub({ pactUrls: pactFiles, port: 4000, logLevel: "debug" });
   await pactStub.start();
 });
 
